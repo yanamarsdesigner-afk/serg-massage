@@ -1,0 +1,858 @@
+<!DOCTYPE html>
+<html lang="uk" class="js">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Сергій Удовіков — масаж у Харкові</title>
+<link rel="icon" href="img/favicon.svg" type="image/svg+xml">
+<link rel="apple-touch-icon" href="img/apple-touch-icon.png">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Сергій Удовіков — масаж у Харкові">
+<meta property="og:description" content="Поверніться до свого тіла. Інтегративний тілесний масаж у Харкові. Запис у Telegram.">
+<meta property="og:image" content="img/og.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta name="twitter:card" content="summary_large_image">
+<meta name="theme-color" content="#0E0C0B">
+<meta name="description" content="Не просто розім'яти спину, а зняти напругу там, де вона справді живе. Масаж у Харкові.">
+<style>
+@font-face{font-family:"Manrope";font-style:normal;font-weight:200 800;font-display:swap;src:url(fonts/manrope-cyrillic-wght-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Manrope";font-style:normal;font-weight:200 800;font-display:swap;src:url(fonts/manrope-latin-wght-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2199,U+2212,U+2215,U+FEFF,U+FFFD}
+@font-face{font-family:"Noto Serif Display";font-style:normal;font-weight:100 900;font-stretch:62.5% 100%;font-display:swap;src:url(fonts/noto-serif-display-cyrillic-standard-normal.woff2) format("woff2");unicode-range:U+0301,U+0400-045F,U+0490-0491,U+04B0-04B1,U+2116}
+@font-face{font-family:"Noto Serif Display";font-style:normal;font-weight:100 900;font-stretch:62.5% 100%;font-display:swap;src:url(fonts/noto-serif-display-latin-standard-normal.woff2) format("woff2");unicode-range:U+0000-00FF,U+0131,U+0152-0153,U+02BB-02BC,U+02C6,U+02DA,U+02DC,U+0304,U+0308,U+0329,U+2000-206F,U+20AC,U+2122,U+2190-2199,U+2212,U+2215,U+FEFF,U+FFFD}
+
+:root{
+  --black:#0E0C0B; --white:#F5F2EE; --accent:#E2B27E; --accent-light:#F0D4B2;
+  --glass:rgba(245,242,237,.14);
+  --pad:58px;
+}
+*,*::before,*::after{box-sizing:border-box}
+html{-webkit-text-size-adjust:100%;scroll-behavior:smooth}
+body{margin:0;background:var(--black);color:var(--white);font-family:"Manrope",system-ui,sans-serif;font-size:20px;line-height:1.5;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}
+button{font:inherit;color:inherit;background:none;border:0;padding:0;cursor:pointer}
+img{display:block;max-width:100%}
+.serif{font-family:"Noto Serif Display",Georgia,serif;font-stretch:75%;font-weight:400}
+.acc{color:var(--accent)}
+.sr{position:absolute;width:1px;height:1px;overflow:hidden;clip:rect(0 0 0 0);white-space:nowrap}
+
+/* ---------- buttons ---------- */
+.btn{display:inline-flex;align-items:center;gap:24px;padding:24px 28px 24px 32px;border-radius:4px;
+  font-weight:700;font-size:18px;line-height:20px;letter-spacing:.08em;text-transform:uppercase;color:var(--black);white-space:nowrap}
+.btn--accent{background:var(--accent)}
+.btn--light{background:var(--white)}
+.btn__arrow{display:flex;align-items:center;gap:24px}
+.btn__arrow::before{content:"";width:1px;height:20px;background:var(--black);opacity:.3}
+.btn--head{padding-top:16px;padding-bottom:16px}
+
+.chip{display:inline-flex;align-items:center;gap:16px;padding:16px 20px;border-radius:4px;background:var(--white);color:var(--black);
+  font-weight:700;font-size:18px;line-height:20px;letter-spacing:.08em;text-transform:uppercase}
+.chip__sep{width:1px;height:16px;background:var(--black);opacity:.2}
+
+.eyebrow{display:flex;align-items:center;gap:6px;font-size:18px;line-height:1.5}
+.eyebrow::before{content:"";width:8px;height:8px;background:var(--accent);flex:none}
+
+/* ---------- hero ---------- */
+.hero{position:relative;min-height:max(100svh,720px);display:flex;flex-direction:column;justify-content:space-between;
+  padding:32px var(--pad) var(--pad);overflow:hidden;isolation:isolate}
+.hero__bg{position:absolute;inset:0;z-index:-1}
+.hero__bg picture,.hero__bg img{width:100%;height:100%}
+.hero__bg img{object-fit:cover;object-position:0% 45%}
+.hero__bg::after{content:"";position:absolute;inset:0;
+  background:linear-gradient(180deg,rgba(14,12,11,.35) 0%,rgba(14,12,11,0) 50%,rgba(14,12,11,.7) 100%),
+             linear-gradient(90deg,rgba(14,12,11,.75) 0%,rgba(14,12,11,.25) 50%,rgba(14,12,11,.05) 100%)}
+.hero__head{display:flex;justify-content:space-between;align-items:center;position:relative;z-index:2}
+.hero__bottom{display:flex;justify-content:space-between;align-items:flex-end;gap:40px;position:relative;z-index:2}
+.hero__text{display:flex;flex-direction:column;gap:32px;align-items:flex-start;max-width:640px}
+.hero__titles{display:flex;flex-direction:column;gap:12px}
+.hero h1{margin:0;font-size:clamp(64px,7.78vw,112px);line-height:.86;letter-spacing:-.02em}
+.hero__lead{margin:0;max-width:500px;font-size:20px;line-height:1.5;opacity:.75}
+
+.video{display:flex;gap:20px;align-items:stretch;width:428px;flex:none;padding:12px 24px 12px 12px;border-radius:4px;
+  background:var(--glass);-webkit-backdrop-filter:blur(20px);backdrop-filter:blur(20px)}
+.video__thumb{position:relative;width:128px;height:128px;flex:none;border-radius:2px;overflow:hidden}
+.video__thumb img{width:100%;height:100%;object-fit:cover}
+.video__play{position:absolute;left:7px;top:89px;width:32px;height:32px}
+.video__body{display:flex;flex-direction:column;justify-content:space-between;min-width:0}
+.video__text{margin:0;font-size:16px;line-height:1.3;opacity:.65}
+.video__link{font-weight:700;font-size:13px;line-height:1;letter-spacing:.12em;text-transform:uppercase;white-space:pre}
+
+/* focus markers (desktop: three static) */
+.focus{position:absolute;z-index:1;pointer-events:none}
+.focus__cap{position:absolute;display:flex;align-items:center;gap:8px;white-space:nowrap;font-size:18px}
+.focus__num{color:var(--accent);font-weight:600;line-height:1.2;letter-spacing:.08em}
+.focus__txt{line-height:1.5}
+.focus--big{width:280px;height:200px;left:58.33%;top:40%}
+.focus--big .focus__glass{position:absolute;inset:8px;border-radius:2px;background:rgba(245,242,237,.08);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.focus--big .focus__corners{position:absolute;inset:0}
+.focus--big .focus__cross{position:absolute;left:50%;top:50%;width:16px;height:16px;transform:translate(-50%,-50%)}
+.focus--big .focus__cap{left:20px;bottom:20px}
+.focus--small{width:48px;height:48px}
+.focus--small .focus__corners{position:absolute;inset:0}
+.focus--small .focus__dot{position:absolute;left:21px;top:21px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.focus--small .focus__cap{left:60px;top:14px}
+.focus--f2{left:49.72%;top:23.6%}
+.focus--f3{left:78.61%;top:26.8%}
+.focus--mob{display:none}
+
+/* ---------- menu overlay ---------- */
+.menu{position:fixed;inset:0;z-index:50;display:flex;flex-direction:column;justify-content:space-between;gap:64px;
+  padding:32px var(--pad) var(--pad);background:rgba(14,12,11,.92);-webkit-backdrop-filter:blur(40px);backdrop-filter:blur(40px);
+  opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s linear .35s;overflow-y:auto}
+.menu.is-open{opacity:1;visibility:visible;transition:opacity .35s ease}
+.menu__head{display:flex;justify-content:space-between;align-items:center}
+.menu__close svg{width:14px;height:14px}
+.menu__main{display:flex;justify-content:space-between;align-items:center;flex:1}
+.menu__list{list-style:none;margin:0;padding:0;display:flex;flex-direction:column;gap:24px}
+.menu__item{display:flex;align-items:flex-start;gap:24px;transition:padding-left .3s ease}
+.menu__num{font-size:18px;line-height:1.5;opacity:.4;transition:color .3s,opacity .3s}
+.menu__title{font-size:80px;line-height:.96;letter-spacing:-.02em;opacity:.55;transition:opacity .3s}
+.menu__item:hover,.menu__item:focus-visible{padding-left:24px}
+.menu__item:hover .menu__num,.menu__item:focus-visible .menu__num{color:var(--accent);opacity:1}
+.menu__item:hover .menu__title,.menu__item:focus-visible .menu__title{opacity:1}
+.menu__contacts{width:428px;display:flex;flex-direction:column;gap:32px}
+.contact{display:flex;flex-direction:column;gap:4px}
+.contact__label{font-size:18px;line-height:1.5;opacity:.4}
+.contact__value{font-size:20px;line-height:1.5}
+.menu__foot{display:flex;justify-content:space-between;align-items:center;font-size:18px;line-height:1.5}
+.menu__brand{display:flex;align-items:center;gap:16px}
+.menu__brand svg{width:64px;height:64px;flex:none}
+.menu__muted{opacity:.5}
+.menu__cta{display:none}
+body.menu-open{overflow:hidden}
+
+/* ---------- tablet ---------- */
+@media (max-width:1199px){
+  :root{--pad:40px}
+  .hero__bottom{flex-direction:column;align-items:flex-start}
+  .menu__title{font-size:64px}
+  .menu__contacts{width:auto}
+}
+@media (max-width:1023px){
+  .focus--big,.focus--f2,.focus--f3{display:none}
+}
+
+/* ---------- mobile ---------- */
+@media (max-width:767px){
+  :root{--pad:20px}
+  .hero{min-height:max(100svh,640px);padding:12px 20px 20px}
+  .hero__bg picture{position:absolute;inset:0 0 auto 0;height:80.65%}
+  .hero__bg img{object-position:50% 0%}
+  .hero__bg::after{background:linear-gradient(180deg,rgba(14,12,11,.35) 0%,rgba(14,12,11,.2) 42%,rgba(14,12,11,.9) 72%,#0E0C0B 100%)}
+  .hero__head{justify-content:flex-end}
+  .hero__head .btn{display:none}
+  .chip{gap:10px;padding:12px 14px;font-weight:600;font-size:12px;line-height:1.2;letter-spacing:.08em;text-transform:none}
+  .chip__sep{display:none}
+  .hero__bottom{gap:20px;padding-top:120px;align-items:stretch}
+  .hero__text{gap:20px;max-width:none}
+  .hero__titles{gap:8px}
+  .eyebrow{font-size:14px;line-height:1.4}
+  .hero h1{font-size:44px;line-height:.96;letter-spacing:-.02em}
+  .hero__lead{font-size:16px;line-height:1.4;opacity:.75;max-width:none}
+  .btn{width:100%;justify-content:space-between;gap:20px;padding:16px 20px;font-size:13px;line-height:1.54}
+  .btn__arrow{gap:20px}
+  .video{width:100%;gap:8px;padding:8px 12px 8px 8px}
+  .video__thumb{width:88px;height:88px}
+  .video__play{left:4px;top:56px;width:28px;height:28px}
+  .video__text{font-size:13px;line-height:1.4}
+  .video__link{line-height:1.54;letter-spacing:.08em}
+
+  .focus--mob{display:block;width:32px;height:32px;left:var(--x);top:var(--y);
+    transition:left 1.2s cubic-bezier(.6,0,.2,1),top 1.2s cubic-bezier(.6,0,.2,1)}
+  .focus--mob .focus__corners{position:absolute;inset:0}
+  .focus--mob .focus__dot{position:absolute;left:13px;top:13px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+  .focus--mob .focus__cap{left:44px;top:50%;transform:translateY(-50%);font-size:14px;line-height:1.4;transition:opacity .4s ease}
+  .focus--mob.is-left .focus__cap{left:auto;right:44px}
+  .focus--mob .focus__num{font-weight:400;letter-spacing:0;line-height:1.4}
+  .focus--mob .focus__txt{line-height:1.4}
+  .focus--mob.is-fading .focus__cap{opacity:0}
+
+  .menu{padding:12px 20px 20px;gap:40px}
+  .menu__head{justify-content:flex-end}
+  .menu__head .btn{display:none}
+  .menu__close svg{width:12px;height:12px}
+  .menu__main{flex-direction:column;align-items:stretch;justify-content:space-between;gap:40px;padding-top:24px}
+  .menu__list{gap:30px}
+  .menu__item{gap:12px}
+  .menu__item:hover,.menu__item:focus-visible{padding-left:0}
+  .menu__num{font-size:14px;line-height:1.4;color:var(--accent);opacity:1}
+  .menu__title{font-size:40px;line-height:.98;opacity:1}
+  .menu__bottom{display:flex;flex-direction:column;gap:36px}
+  .menu__contacts{gap:20px}
+  .contact__label{font-size:14px;line-height:1.4}
+  .contact__value{font-size:16px;line-height:1.4}
+  .menu__foot{display:none}
+  .menu__cta{display:flex}
+}
+
+/* video "in progress" note */
+.video{position:relative;cursor:pointer}
+.video__toast{position:absolute;inset:0;z-index:2;display:flex;align-items:center;justify-content:center;text-align:center;padding:12px 24px;border-radius:4px;
+  background:rgba(14,12,11,.9);font-size:16px;line-height:1.4;opacity:0;transition:opacity .3s;pointer-events:none}
+.video.is-note .video__toast{opacity:1;transform:none}
+
+/* ---------- 02 after session ---------- */
+.after{background:var(--black);padding:120px var(--pad);display:flex;flex-direction:column;align-items:center;gap:64px}
+.after h2{margin:0;max-width:954px;text-align:center;font-size:54px;line-height:.96;letter-spacing:-.02em}
+.after__levels{width:100%;display:flex;justify-content:space-between;align-items:center;padding:0 216px}
+.after__label{font-size:18px;line-height:1.5;opacity:.5}
+.after__img{width:375px;height:304px;object-fit:cover}
+.after__next{display:flex;flex-direction:column;align-items:center;gap:12px}
+.after__next::before{content:"";width:1px;height:48px;background:rgba(245,242,238,.1)}
+@media (max-width:1199px){ .after__levels{padding:0 80px} .after h2{font-size:46px} }
+@media (max-width:767px){
+  .video__toast{font-size:14px;padding:8px 16px}
+  .after{padding:56px 20px;gap:20px}
+  .after h2{font-size:30px;line-height:1.02;letter-spacing:-.01em}
+  .after__levels{padding:0}
+  .after__label{font-size:14px;line-height:1.4;width:50px}
+  .after__label:last-child{text-align:right}
+  .after__img{width:142px;height:178px}
+  .after__next::before{display:none}
+}
+
+/* ---------- shared: section heading, carousel, dots ---------- */
+.sec-head{display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.sec-title{display:flex;flex-direction:column;gap:12px;max-width:876px}
+.sec-title h2{margin:0;font-size:clamp(48px,5.56vw,80px);line-height:.96;letter-spacing:-.02em}
+.carousel__track{display:flex;gap:20px;overflow-x:auto;scroll-snap-type:x mandatory;scrollbar-width:none;
+  margin-right:calc(-1*var(--pad));padding-right:var(--pad);cursor:grab;overscroll-behavior-x:contain}
+.carousel__track::-webkit-scrollbar{display:none}
+.carousel__track.is-drag{cursor:grabbing;scroll-snap-type:none;user-select:none}
+.carousel__track>*{scroll-snap-align:start;flex:none}
+.dots{display:flex;gap:8px;align-items:center}
+.dots button{width:8px;height:8px;border-radius:4px;background:var(--white);opacity:.4;transition:width .45s cubic-bezier(.6,0,.2,1),background .3s,opacity .3s}
+.dots button.is-active{width:32px;background:var(--accent);opacity:1}
+
+/* ---------- 03 services ---------- */
+.services{position:relative;isolation:isolate;overflow:hidden;background:var(--black);padding:120px var(--pad);display:flex;flex-direction:column;gap:64px}
+.services__bg{position:absolute;inset:-60px;z-index:-2;width:calc(100% + 120px);height:calc(100% + 120px);object-fit:cover;filter:blur(24px)}
+.services::before{content:"";position:absolute;inset:0;z-index:-1;background:rgba(14,12,11,.5)}
+.services__catalog{display:flex;flex-direction:column;gap:32px}
+.card{width:428px;display:flex;flex-direction:column;gap:32px;padding:32px;border-radius:4px;background:rgba(245,242,237,.16);
+  -webkit-backdrop-filter:blur(24px);backdrop-filter:blur(24px)}
+.card__text{flex:1;display:flex;flex-direction:column;gap:16px}
+.card__num{color:var(--accent);font-weight:600;font-size:18px;line-height:1.2;letter-spacing:.08em}
+.card h3{margin:0;font-size:36px;line-height:.96;letter-spacing:-.02em;font-weight:400}
+.card__desc{margin:0;font-size:18px;line-height:1.4;opacity:.85}
+.prices{display:flex;flex-direction:column}
+.price{display:flex;align-items:center;gap:16px;padding:12px 0}
+.price__dur{font-size:20px;line-height:1.5;opacity:.85;white-space:nowrap}
+.price__dots{flex:1;height:1px;background-image:linear-gradient(90deg,rgba(245,242,238,.35) 2px,transparent 2px);background-size:8px 1px;background-position:0 0}
+.price__val{font-weight:600;font-size:20px;line-height:1;letter-spacing:-.01em;white-space:nowrap}
+.card .btn{justify-content:space-between}
+.services__foot{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.services__note{margin:0;font-size:18px;line-height:1.5;opacity:.6}
+@media (max-width:1199px){ .sec-head{flex-direction:column;align-items:flex-start} }
+@media (max-width:767px){
+  .sec-head{gap:20px}
+  .sec-title{gap:8px}
+  .sec-title .eyebrow{font-size:14px;line-height:1.4}
+  .sec-title h2{font-size:30px;line-height:1.02;letter-spacing:-.01em}
+  .carousel__track{gap:12px}
+  .services{padding:56px 20px;gap:20px}
+  .services .sec-head{display:contents}
+  .services__catalog{display:contents}
+  .services .sec-title{order:1} .services .carousel__track{order:2} .services__foot{order:3} .services .video{order:4}
+  .services__foot{flex-direction:column-reverse;align-items:flex-start;gap:20px}
+  .services__note{font-size:14px;line-height:1.4}
+  .card{width:280px;gap:16px;padding:16px}
+  .card__text{gap:8px}
+  .card__num{font-size:12px}
+  .card h3{font-size:20px;line-height:1.1;letter-spacing:-.01em}
+  .card__desc{font-size:14px;line-height:1.5}
+  .price{padding:10px 0}
+  .price__dur{font-size:16px;line-height:1.4}
+  .price__val{font-size:15px;letter-spacing:0}
+}
+
+/* ---------- 04 about ---------- */
+.eyebrow--light::before{background:#966238}
+.about{background:#fff;color:var(--black);padding:120px var(--pad);display:flex;flex-direction:column;align-items:center;gap:40px}
+.about__top{display:flex;flex-direction:column;align-items:center;gap:32px;text-align:center}
+.about__top .sec-title{align-items:center}
+.about__text{margin:0;max-width:852px;font-size:20px;line-height:1.5;opacity:.75;text-align:center}
+.about__photos{width:100%;display:flex;gap:20px}
+.about__photo{position:relative;flex:1;aspect-ratio:652/490;border-radius:2px;overflow:hidden}
+.about__photo img{width:100%;height:100%;object-fit:cover}
+.quote{position:absolute;left:71.2%;top:20%;width:320px;height:160px;transform:translateX(-50%);color:var(--white)}
+.quote__glass{position:absolute;inset:8px;border-radius:2px;background:rgba(245,242,237,.08);-webkit-backdrop-filter:blur(3px);backdrop-filter:blur(3px)}
+.quote__corners{position:absolute;inset:0}
+.quote__body{position:absolute;left:49px;top:46px;width:222px;display:flex;flex-direction:column;align-items:center;gap:11px}
+.quote__body p{margin:0;font-size:20px;line-height:1.2;text-align:center}
+.about__bottom{margin:0;max-width:802px}
+@media (max-width:1023px){ .quote{transform:translateX(-50%) scale(.8);transform-origin:50% 0} }
+@media (max-width:767px){
+  .about{padding:56px 20px;gap:20px;align-items:stretch}
+  .about__top{gap:20px;align-items:stretch;text-align:left}
+  .about__top .sec-title{align-items:flex-start}
+  .about__text{font-size:16px;line-height:1.4;text-align:left}
+  .about__photos{gap:8px}
+  .about__photo{aspect-ratio:auto;height:200px}
+  .about__photo--serg{order:-1}
+  .quote{display:none}
+}
+
+/* ---------- 05 reviews ---------- */
+.reviews{background:var(--black);padding:120px var(--pad);display:flex;flex-direction:column;gap:64px;overflow:hidden}
+.reviews__catalog{display:flex;flex-direction:column;gap:32px}
+.reviews .carousel__track{align-items:flex-start;transition:height .4s ease}
+.bubble{width:416px;display:flex;flex-direction:column;gap:8px;padding:24px 24px 16px;border-radius:16px 16px 16px 4px;
+  background:rgba(245,242,237,.14);-webkit-backdrop-filter:blur(40px);backdrop-filter:blur(40px)}
+.bubble p{margin:0;font-size:20px;line-height:1.5}
+.bubble mark{color:inherit;background:linear-gradient(180deg,transparent 52%,rgba(226,178,126,.55) 52%,rgba(226,178,126,.55) 92%,transparent 92%);
+  -webkit-box-decoration-break:clone;box-decoration-break:clone}
+.bubble time{align-self:flex-end;font-size:18px;line-height:1.5;opacity:.4}
+.reviews__foot{display:flex;justify-content:space-between;align-items:center;gap:20px}
+.btn--outline{background:transparent;color:var(--white);box-shadow:inset 0 0 0 1px var(--white)}
+.btn--outline .btn__arrow::before{background:var(--white)}
+@media (max-width:767px){
+  .reviews{padding:56px 20px;gap:20px}
+  .reviews__catalog{gap:20px}
+  .bubble{width:280px;gap:4px;padding:16px 16px 12px}
+  .bubble p{font-size:16px;line-height:1.4}
+  .bubble time{font-size:14px;line-height:1.4}
+  .reviews__foot{flex-direction:column-reverse;align-items:stretch}
+  .reviews__foot .btn{white-space:normal;text-align:left}
+}
+
+
+
+/* ---------- desktop hero focus: one travelling marker ---------- */
+.focus--desk{width:48px;height:48px;left:var(--x);top:var(--y);transform:translate(-50%,-50%);
+  transition:left 1.4s cubic-bezier(.6,0,.2,1),top 1.4s cubic-bezier(.6,0,.2,1)}
+.focus--desk .focus__corners{position:absolute;inset:0}
+.focus--desk .focus__dot{position:absolute;left:21px;top:21px;width:6px;height:6px;border-radius:50%;background:var(--accent)}
+.focus--desk .focus__cap{left:60px;top:50%;transform:translateY(-50%);transition:opacity .45s ease}
+.focus--desk.is-fading .focus__cap,.focus--desk.is-hidden{opacity:0}
+.focus--desk{transition:left 1.4s cubic-bezier(.6,0,.2,1),top 1.4s cubic-bezier(.6,0,.2,1),opacity .8s ease}
+@media (max-width:1023px){ .focus--desk{display:none} }
+
+/* ---------- reveal animations ---------- */
+.js .rv{opacity:0;transform:translateY(16px);transition:opacity 1.1s ease,transform 1.1s cubic-bezier(.2,.6,.2,1);transition-delay:var(--d,0s)}
+.js .hero .eyebrow{animation:fade-up .9s ease .2s both}
+.js .hero__lead{--to:.75;animation:fade-up .9s ease 1s both}
+.js .hero__bottom .btn--accent{animation:fade-up .9s ease 1.3s both}
+.js .hero .video{animation:fade-up .9s ease 1.6s both}
+.js .focus--desk,.js .focus--mob{animation:fade-in 1s ease 2s both}
+@keyframes fade-up{from{opacity:0;transform:translateY(16px)}to{opacity:var(--to,1);transform:none}}
+@keyframes fade-in{from{opacity:0}to{opacity:1}}
+@media (prefers-reduced-motion:reduce){.js .hero .eyebrow,.js .hero__lead,.js .hero__bottom .btn--accent,.js .hero .video,.js .focus--desk,.js .focus--mob{animation:none}}
+.js .rv.is-in{opacity:1;transform:none}
+.js .rv-img{overflow:hidden}
+.js .rv-img img{transform:scale(1.05);filter:brightness(.6);transition:transform 1.4s cubic-bezier(.2,.6,.2,1),filter 1.4s ease}
+.js .rv-img.is-in img{transform:none;filter:none}
+.js .hero__bg img{transform:scale(1.06);transition:transform 4s cubic-bezier(.2,.6,.2,1)}
+.js .hero.is-in .hero__bg img{transform:none}
+.fill-l{opacity:var(--o,.18)}
+@media (prefers-reduced-motion:reduce){
+  .js .rv,.js .rv-img img,.js .hero__bg img{opacity:1;transform:none;filter:none}
+  .fill-l{opacity:1}
+}
+
+/* ---------- hovers: fill left→right, arrow loops ---------- */
+.btn,.chip{position:relative;isolation:isolate;overflow:hidden;--fill:#fff;transition:color .5s cubic-bezier(.65,0,.35,1)}
+.btn--accent{--fill:var(--accent-light)}
+.btn--outline{--fill:var(--white)}
+.btn::after,.chip::after,a.crow::after{content:"";position:absolute;inset:0;z-index:-1;background:var(--fill);
+  transform:scaleX(0);transform-origin:left center;transition:transform .5s cubic-bezier(.65,0,.35,1)}
+.arr{display:inline-flex;overflow:hidden}
+.arr i{font-style:normal;display:inline-block}
+@keyframes arrow-loop{0%{transform:translateX(0)}45%{transform:translateX(120%)}45.01%{transform:translateX(-120%)}100%{transform:translateX(0)}}
+.menu__close svg{transition:transform .45s cubic-bezier(.65,0,.35,1)}
+a.crow{position:relative;isolation:isolate;overflow:hidden;--fill:var(--black);transition:color .5s cubic-bezier(.65,0,.35,1),padding .5s cubic-bezier(.65,0,.35,1)}
+.btn--outline .btn__arrow::before{transition:background .5s}
+.menu .contact,.fcol__links a,.footer__bottom a{transition:opacity .25s}
+@media (hover:hover){
+  .btn:hover::after,.chip:hover::after,a.crow:hover::after{transform:scaleX(1)}
+  .btn:hover .arr i,a.crow:hover .arr i{animation:arrow-loop .6s cubic-bezier(.65,0,.35,1)}
+  .btn--outline:hover{color:var(--black)}
+  .btn--outline:hover .btn__arrow::before{background:var(--black)}
+  .menu__close:hover svg{transform:rotate(90deg)}
+  a.crow:hover{color:var(--white);padding-left:20px;padding-right:20px}
+  .menu .contact:hover,.fcol__links a:hover,.footer__bottom a:hover{opacity:.6}
+}
+
+/* ---------- 06 contacts ---------- */
+.contacts{background:#fff;color:var(--black);padding:120px var(--pad);display:flex;justify-content:space-between;align-items:flex-end;gap:40px}
+.contacts__left{width:652px;display:flex;flex-direction:column;gap:64px}
+.acc-dark{color:#966238}
+.clist{border-top:1px solid rgba(14,12,11,.12)}
+.crow{display:flex;align-items:center;gap:20px;padding:32px 0;border-bottom:1px solid rgba(14,12,11,.12)}
+.crow__label{width:204px;flex:none;font-weight:600;font-size:16px;line-height:1.2;letter-spacing:.08em;opacity:.5}
+.crow__value{flex:1;font-size:28px;line-height:1;letter-spacing:-.01em}
+.crow__arrow{font-weight:700;font-size:18px;line-height:20px;transition:transform .25s ease}
+.contacts__photo{width:538px;height:471px;flex:none;object-fit:cover}
+
+/* ---------- 07 footer ---------- */
+.footer{background:var(--black);padding:120px var(--pad) 48px;display:flex;flex-direction:column;gap:48px}
+.footer__cols{display:grid;grid-template-columns:repeat(4,auto);justify-content:space-between;gap:20px 40px;align-items:start}
+.footer__brand{width:428px;flex:none;display:flex;flex-direction:column;gap:24px}
+.logo{display:flex;align-items:center;gap:16px}
+.logo svg{width:64px;height:64px;flex:none}
+.logo__name{display:flex;flex-direction:column;gap:4px;line-height:1.5}
+.logo__name b{font-weight:400;font-size:20px}
+.logo__name span{font-size:18px;opacity:.5}
+.footer__muted{margin:0;font-size:18px;line-height:1.5;opacity:.5}
+.fcol{width:204px;flex:none;display:flex;flex-direction:column;gap:24px}
+.fcol__label{font-size:18px;line-height:1.5;opacity:.4}
+.fcol__links{display:flex;flex-direction:column;gap:12px;font-size:20px;line-height:1.5}
+.footer__ask{display:flex;flex-direction:column;gap:24px;align-items:flex-start}
+.footer__ask p{margin:0;font-size:28px;line-height:1;letter-spacing:-.01em;opacity:.5}
+.footer__line{height:1px;background:rgba(245,242,238,.1)}
+.footer__bottom{display:flex;justify-content:space-between;font-size:18px;line-height:1.5}
+.footer__bottom>*{opacity:.4}
+@media (max-width:1199px){
+  .contacts{flex-direction:column;align-items:stretch}
+  .contacts__left{width:auto}
+  .contacts__photo{width:100%;height:auto;aspect-ratio:538/471}
+  .footer__cols{grid-template-columns:repeat(3,auto);row-gap:48px}
+  .footer__brand{grid-column:1/-1;width:auto}
+}
+@media (max-width:767px){
+  .contacts{padding:56px 20px;gap:20px}
+  .contacts__left{gap:20px}
+  .clist{border-top:0}
+  .crow{gap:12px;padding:16px 0;flex-wrap:wrap}
+  .crow{display:grid;grid-template-columns:1fr auto;row-gap:4px;column-gap:12px}
+  .crow__label{width:auto;grid-column:1;font-size:12px}
+  .crow__value{grid-column:1;font-size:20px;line-height:1.1}
+  .crow__arrow{grid-column:2;grid-row:1/3;font-size:13px;line-height:1.54}
+  .contacts__photo{aspect-ratio:auto;height:260px}
+  .footer{padding:56px 20px;gap:32px}
+  .footer__cols{display:flex;flex-direction:column;gap:32px}
+  .footer__brand{gap:16px}
+  .logo{gap:12px}
+  .logo svg{width:48px;height:48px}
+  .logo__name{line-height:1.4}
+  .logo__name b{font-size:16px}
+  .logo__name span,.footer__muted{font-size:14px;line-height:1.4}
+  .footer__navs{display:flex;gap:20px;width:100%}
+  .fcol{flex:1;width:auto;gap:16px}
+  .fcol__label{font-size:14px;line-height:1.4}
+  .fcol__links{font-size:16px;line-height:1.4}
+  .footer__ask{width:100%;gap:16px;align-items:stretch}
+  .footer__ask p{font-size:20px;line-height:1.1}
+  .footer__bottom{flex-direction:column;gap:8px;font-size:14px;line-height:1.4}
+}
+@media (min-width:768px){ .footer__navs{display:contents} }
+
+/* ---------- privacy modal ---------- */
+.modal{position:fixed;inset:0;z-index:60;background:rgba(14,12,11,.92);-webkit-backdrop-filter:blur(40px);backdrop-filter:blur(40px);
+  overflow-y:auto;opacity:0;visibility:hidden;transition:opacity .35s ease,visibility 0s linear .35s}
+.modal.is-open{opacity:1;visibility:visible;transition:opacity .35s ease}
+.modal__head{position:sticky;top:0;display:flex;justify-content:flex-end;padding:32px var(--pad) 0}
+.modal__body{max-width:760px;margin:0 auto;padding:24px var(--pad) 96px}
+.modal__body h2{margin:0 0 8px;font-size:54px;line-height:.96;letter-spacing:-.02em}
+.modal__body .modal__date{margin:0 0 40px;font-size:18px;opacity:.5}
+.modal__body h3{margin:32px 0 8px;font-weight:600;font-size:18px;letter-spacing:.08em;color:var(--accent)}
+.modal__body p{margin:0;font-size:18px;line-height:1.6;opacity:.85}
+@media (max-width:767px){
+  .modal__head{padding:12px 20px 0}
+  .modal__body{padding:20px 20px 56px}
+  .modal__body h2{font-size:30px;line-height:1.02}
+  .modal__body .modal__date{font-size:14px;margin-bottom:24px}
+  .modal__body h3{font-size:12px;margin-top:24px}
+  .modal__body p{font-size:16px;line-height:1.5}
+}
+
+@media (min-width:768px){ .menu__bottom{display:contents} }
+@media (prefers-reduced-motion:reduce){ *{transition:none!important} }
+</style>
+</head>
+<body>
+
+<header class="hero" id="top">
+  <div class="hero__bg" aria-hidden="true">
+    <picture>
+      <source media="(max-width:767px)" srcset="img/hero-mob.webp">
+      <source media="(max-width:1280px)" srcset="img/hero-desk-1280.webp">
+      <img src="img/hero-desk.webp" alt="" fetchpriority="high">
+    </picture>
+  </div>
+
+  <div class="hero__head">
+    <button class="chip" type="button" data-menu-open aria-haspopup="dialog" aria-controls="menu">
+      <svg width="16" height="10" viewBox="0 0 16 10" fill="none" aria-hidden="true"><path d="M0 1H16M0 9H10" stroke="#0E0C0B" stroke-width="1.5"/></svg>
+      <span class="chip__sep" aria-hidden="true"></span>
+      <span>Меню</span>
+    </button>
+    <a class="btn btn--light btn--head" href="https://t.me/ser_g00d" target="_blank" rel="noopener">Записатися<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+  </div>
+
+  <!-- desktop: one marker travelling between three points (like mobile) -->
+  <div class="focus focus--desk" aria-hidden="true" style="--x:68.06%;--y:50%">
+    <svg class="focus__corners" width="48" height="48" viewBox="0 0 48 48" fill="none"><path d="M.75 10V.75H10M38 .75h9.25V10M47.25 38v9.25H38M10 47.25H.75V38" stroke="#F5F2EE" stroke-width="1.5"/></svg>
+    <span class="focus__dot"></span>
+    <div class="focus__cap"><span class="focus__num">(01)</span><span class="focus__txt">легкість у тілі</span></div>
+  </div>
+  <!-- mobile: one marker that travels -->
+  <div class="focus focus--mob" aria-hidden="true" style="--x:7.5%;--y:11.6%">
+    <svg class="focus__corners" width="32" height="32" viewBox="0 0 32 32" fill="none"><path d="M.5 6.67V.5h6.17M25.33.5H31.5v6.17M31.5 25.33v6.17h-6.17M6.67 31.5H.5v-6.17" stroke="#F5F2EE" stroke-width="1.5"/></svg>
+    <span class="focus__dot"></span>
+    <div class="focus__cap"><span class="focus__num">(01)</span><span class="focus__txt">легкість у тілі</span></div>
+  </div>
+
+  <div class="hero__bottom">
+    <div class="hero__text">
+      <div class="hero__titles">
+        <p class="eyebrow" style="margin:0">масаж у Харкові</p>
+        <h1 class="serif">Поверніться<br> до свого <span class="acc">тіла</span></h1>
+      </div>
+      <p class="hero__lead">Не просто розім'яти спину, а зняти напругу там, де вона справді живе. Після сеансу легше дихати, голова тихішає, а в тілі з'являється простір.</p>
+      <a class="btn btn--accent" href="https://t.me/ser_g00d" target="_blank" rel="noopener">Записатися на масаж<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+    </div>
+
+    <div class="video" role="button" tabindex="0" aria-label="Дивитись відео">
+      <div class="video__toast" role="status" aria-live="polite">Дякую за цікавість, але відео ще в розробці</div>
+      <div class="video__thumb">
+        <img src="img/video-preview.webp" alt="Сергій під час сеансу" width="128" height="128" loading="lazy">
+        <svg class="video__play" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#0E0C0B" fill-opacity=".6"/><path d="M13.14 10.86 21.14 16l-8 5.14V10.86Z" fill="#F5F2EE"/></svg>
+      </div>
+      <div class="video__body">
+        <p class="video__text">Як проходить сеанс: коротке відео від Сергія про техніки та підхід.</p>
+        <span class="video__link">Дивитись відео  →</span>
+      </div>
+    </div>
+  </div>
+</header>
+
+<main>
+<section class="after" id="after">
+  <h2 class="serif">Масаж працює одразу на <span class="acc">декількох рівнях</span>: знімає м'язову напругу, заспокоює нервову систему, розвантажує психіку</h2>
+  <div class="after__levels">
+    <span class="after__label">тіло</span>
+    <img class="after__img" src="img/face.webp" alt="Руки масажиста на обличчі клієнтки" width="375" height="304" loading="lazy">
+    <span class="after__label">психіка</span>
+  </div>
+  <a class="after__next" href="#services" aria-label="Далі">
+    <svg width="12" height="14" viewBox="0 0 12 14" fill="none" aria-hidden="true"><path d="M6 0V13M11 8 6 13 1 8" stroke="#E2B27E"/></svg>
+  </a>
+</section>
+
+<section class="services" id="services">
+  <img class="services__bg" src="img/services-bg.webp" alt="" aria-hidden="true" loading="lazy">
+  <div class="sec-head">
+    <div class="sec-title">
+      <p class="eyebrow" style="margin:0">послуги та прайс</p>
+      <h2 class="serif">Оберіть, що потрібно <span class="acc">вашому тілу</span> зараз</h2>
+    </div>
+    <div class="video" role="button" tabindex="0" aria-label="Дивитись відео">
+      <div class="video__toast" role="status" aria-live="polite">Дякую за цікавість, але відео ще в розробці</div>
+      <div class="video__thumb">
+        <img src="img/video-preview.webp" alt="Сергій під час сеансу" width="128" height="128" loading="lazy">
+        <svg class="video__play" viewBox="0 0 32 32" fill="none" aria-hidden="true"><circle cx="16" cy="16" r="16" fill="#0E0C0B" fill-opacity=".6"/><path d="M13.14 10.86 21.14 16l-8 5.14V10.86Z" fill="#F5F2EE"/></svg>
+      </div>
+      <div class="video__body">
+        <p class="video__text">Не знаєте, що обрати? подивіться коротке відео про техніки та підхід.</p>
+        <span class="video__link">Дивитись відео  →</span>
+      </div>
+    </div>
+  </div>
+  <div class="services__catalog carousel">
+    <div class="carousel__track">
+      <article class="card">
+        <div class="card__text"><span class="card__num">(01)</span><h3 class="serif">Класичний + інтегративний масаж</h3><p class="card__desc">Універсальна гармонізація, зняття напруги, свобода рухів.</p></div>
+        <div class="prices"><div class="price"><span class="price__dur">60 хвилин</span><span class="price__dots" aria-hidden="true"></span><span class="price__val">1000 грн</span></div><div class="price"><span class="price__dur">90 хвилин</span><span class="price__dots" aria-hidden="true"></span><span class="price__val">1500 грн</span></div><div class="price"><span class="price__dur">120 хвилин</span><span class="price__dots" aria-hidden="true"></span><span class="price__val">2000 грн</span></div></div>
+        <a class="btn btn--accent" href="https://t.me/ser_g00d" target="_blank" rel="noopener">Записатися<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+      </article>
+      <article class="card">
+        <div class="card__text"><span class="card__num">(02)</span><h3 class="serif">Нейрорелаксаційний масаж</h3><p class="card__desc">Глибоке перезавантаження нервової системи, антистрес.</p></div>
+        <div class="prices"><div class="price"><span class="price__dur">60 хвилин</span><span class="price__dots" aria-hidden="true"></span><span class="price__val">900 грн</span></div><div class="price"><span class="price__dur">90 хвилин</span><span class="price__dots" aria-hidden="true"></span><span class="price__val">1300 грн</span></div><div class="price"><span class="price__dur">120 хвилин</span><span class="price__dots" aria-hidden="true"></span><span class="price__val">1800 грн</span></div></div>
+        <a class="btn btn--accent" href="https://t.me/ser_g00d" target="_blank" rel="noopener">Записатися<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+      </article>
+      <article class="card">
+        <div class="card__text"><span class="card__num">(03)</span><h3 class="serif">Лікувально-відновлювальний масаж</h3><p class="card__desc">Робота з тригерними точками та проблемними зонами (банки/перкусор).</p></div>
+        <div class="prices"><div class="price"><span class="price__dur">60 хвилин</span><span class="price__dots" aria-hidden="true"></span><span class="price__val">1100 грн</span></div><div class="price"><span class="price__dur">90 хвилин</span><span class="price__dots" aria-hidden="true"></span><span class="price__val">1700 грн</span></div></div>
+        <a class="btn btn--accent" href="https://t.me/ser_g00d" target="_blank" rel="noopener">Записатися<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+      </article>
+      <article class="card">
+        <div class="card__text"><span class="card__num">(04)</span><h3 class="serif">Масаж у 4 руки</h3><p class="card__desc">Два майстри працюють синхронно: глибоке розслаблення і відчуття повного занурення.</p></div>
+        <div class="prices"><div class="price"><span class="price__dur">90 хвилин</span><span class="price__dots" aria-hidden="true"></span><span class="price__val">2500 грн</span></div></div>
+        <a class="btn btn--accent" href="https://t.me/ser_g00d" target="_blank" rel="noopener">Записатися<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+      </article>
+    </div>
+    <div class="services__foot">
+      <p class="services__note">* Кожна процедура адаптується під вас індивідуально</p>
+      <div class="dots" aria-label="Гортати послуги"></div>
+    </div>
+  </div>
+</section>
+
+<section class="about" id="about">
+  <div class="about__top">
+    <div class="sec-title">
+      <p class="eyebrow eyebrow--light" style="margin:0">про мене</p>
+      <h2 class="serif">Сергій Удовіков</h2>
+    </div>
+    <p class="about__text">Для мене масаж — це щіра розмова з людиною через дотик, через тіло.<br>Масаж - це перш за все про довіру та увагу. Перед кожним сеансом я питаю, як ви почуваєтесь і що турбує, і підлаштовую техніку під вас, а не навпаки.</p>
+  </div>
+  <div class="about__photos">
+    <div class="about__photo">
+      <picture><source media="(max-width:767px)" srcset="img/about-back-m.webp"><img src="img/about-back.webp" alt="Руки Сергія під час масажу спини" loading="lazy"></picture>
+      <div class="quote">
+        <div class="quote__glass"></div>
+        <svg class="quote__corners" width="320" height="160" viewBox="0 0 320 160" fill="none" aria-hidden="true"><path d="M.86 19.2V.6h26.57M292.57.6h26.57v18.6M319.14 140.8v18.6h-26.57M27.43 159.4H.86v-18.6" stroke="#F5F2EE" stroke-width="1.5"/></svg>
+        <div class="quote__body">
+          <svg width="16" height="16" viewBox="0 0 16 16" fill="none" aria-hidden="true"><path d="M8 0V16M0 8H16" stroke="#F5F2EE"/></svg>
+          <p>Я працюю не з м'язом,<br>Я працюю з людиною</p>
+        </div>
+      </div>
+    </div>
+    <div class="about__photo about__photo--serg">
+      <picture><source media="(max-width:767px)" srcset="img/about-serg-m.webp"><img src="img/about-serg.webp" alt="Сергій Удовіков" loading="lazy"></picture>
+    </div>
+  </div>
+  <p class="about__text about__bottom">Я поєдную класичні, нейрорелаксаційні та відновлювальні техніки в інтегративний підхід, бо напруга в плечах часто починається зовсім не в плечах.</p>
+  <a class="btn btn--accent" href="https://t.me/ser_g00d" target="_blank" rel="noopener">Записатися на масаж<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+</section>
+
+<section class="reviews" id="reviews">
+  <div class="sec-title">
+    <p class="eyebrow" style="margin:0">відгуки</p>
+    <h2 class="serif">Відгуки, що <span class="acc">надихають</span> робити ще краще</h2>
+  </div>
+  <div class="reviews__catalog carousel">
+    <div class="carousel__track">
+      <article class="bubble"><p>Щиро дякую за такий глибокий і професійний масаж! Після сеансу відчувається <mark>справжнє полегшення</mark>: зникають затиски, зменшуються болі, тіло ніби знову починає вільно дихати. <mark>Ви надзвичайно тонко відчуваєте тіло</mark>, знаходите саме ті точки, які потребують уваги, і повністю занурюєтеся у свою роботу. Відчувається, що для вас це не просто механічний процес, а справжня робота з тілом, де є і майстерність, і чутливість, і віддача.<br><br>Це не просто розслаблення, а глибоке опрацювання, після якого відчуваєш результат. Дякую за ваші руки, увагу та професіоналізм! <mark>Обов'язково рекомендую!</mark></p></article>
+      <article class="bubble"><p>Благодарю тебя за массаж! Вчера после сеанса было состояние такое же как после гвоздестояния (о котором я тебе рассказывала). Вечером плакала(( утром еле оторвала себя от кровати, но <mark>внутреннее состояние - наполненость</mark>. В ощущениях по телу - <mark>как будто заново родилась</mark> 😊<br><br>Благодарю тебя🤗</p></article>
+      <article class="bubble"><p>Иногда было такое ощущение, что я пластилин и из меня что-то лепят сейчас и <mark>я очень гибкая и пластичная</mark>.<br><br>А потом залезла в ванную и <mark>сейчас так легко и хорошо</mark>. Я аж не ожидала:)</p></article>
+      <article class="bubble"><p>В массаже были использованы различные техники, длительность около 2х часов.<br><mark>Ощущала новые чувства в теле</mark> там где даже не предполагала.<br>Обстановка приятная, <mark>массажист воспитанный</mark>.<br>Результат<br>Чувствую расслабление в теле, лёгкость.<br>Кое где есть синяки от банок и болевые ощущения.<br><mark>В Душе умиротворение, в разуме спокойствие</mark>.</p></article>
+      <article class="bubble"><p>И тебе спасибо! Спасибо за <mark>восстановление моей внутренней гармонии</mark>🤗и умиротворения❤️</p></article>
+    </div>
+    <div class="reviews__foot">
+      <a class="btn btn--outline" href="https://www.instagram.com/stories/highlights/17939327208125839/" target="_blank" rel="noopener">Подивитись більше відгуків у Instagram<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+      <div class="dots" aria-label="Гортати відгуки"></div>
+    </div>
+  </div>
+</section>
+
+<section class="contacts" id="contacts">
+  <div class="contacts__left">
+    <div class="sec-title">
+      <p class="eyebrow eyebrow--light" style="margin:0">контакти</p>
+      <h2 class="serif">Залишилось лише <span class="acc-dark">прийти</span></h2>
+    </div>
+    <div class="clist">
+      <div class="crow"><span class="crow__label">графік</span><span class="crow__value serif">Пн–Нд, 10:00–20:00</span></div>
+      <a class="crow" href="https://www.google.com/maps/search/?api=1&amp;query=%D0%A5%D0%B0%D1%80%D0%BA%D1%96%D0%B2%2C+%D0%BF%D1%80.+%D0%9D%D0%B0%D1%83%D0%BA%D0%B8+56" target="_blank" rel="noopener"><span class="crow__label">адреса</span><span class="crow__value serif">Харків, пр. Науки 56</span><span class="crow__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+      <a class="crow" href="tel:+380965995826"><span class="crow__label">телефон</span><span class="crow__value serif">+380 96 599 58 26</span><span class="crow__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+      <a class="crow" href="https://www.instagram.com/massage_serg_kh/" target="_blank" rel="noopener"><span class="crow__label">instagram</span><span class="crow__value serif">@massage_serg_kh</span><span class="crow__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+    </div>
+  </div>
+  <img class="contacts__photo" src="img/contacts.webp" alt="Руки Сергія з ароматичними оліями" loading="lazy">
+</section>
+</main>
+
+<footer class="footer">
+  <div class="footer__cols">
+    <div class="footer__brand">
+      <div class="logo"><svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M.5 14V.5H14M50 .5h13.5V14M63.5 50v13.5H50M14 63.5H.5V50" stroke="#F5F2EE" stroke-width="1.5"/><path fill="#F5F2EE" d="M13.4958 40.28C12.5438 40.28 11.7598 40.14 11.1438 39.86C10.5278 39.58 10.0705 39.216 9.77183 38.768C9.47316 38.3013 9.32383 37.8067 9.32383 37.284C9.32383 36.8547 9.39849 36.5187 9.54783 36.276C9.71583 36.0147 9.91183 35.828 10.1358 35.716C10.3785 35.604 10.6305 35.548 10.8918 35.548C10.8918 36.556 10.9758 37.3867 11.1438 38.04C11.3118 38.6933 11.5918 39.188 11.9838 39.524C12.3945 39.8413 12.9265 40 13.5798 40C14.4572 40 15.1478 39.748 15.6518 39.244C16.1558 38.74 16.4078 37.9747 16.4078 36.948C16.4078 36.3133 16.3052 35.8093 16.0998 35.436C15.8945 35.044 15.5678 34.6987 15.1198 34.4C14.6718 34.1013 14.0932 33.756 13.3838 33.364C12.5625 32.9347 11.8718 32.5147 11.3118 32.104C10.7518 31.6933 10.3318 31.2267 10.0518 30.704C9.77183 30.1813 9.63183 29.528 9.63183 28.744C9.63183 27.4373 10.0238 26.448 10.8078 25.776C11.5918 25.104 12.6652 24.768 14.0278 24.768C14.8492 24.768 15.5398 24.8893 16.0998 25.132C16.6598 25.356 17.0798 25.664 17.3598 26.056C17.6398 26.448 17.7798 26.8867 17.7798 27.372C17.7798 27.8573 17.6398 28.24 17.3598 28.52C17.0798 28.8 16.6692 28.94 16.1278 28.94C16.1278 27.54 15.9505 26.5413 15.5958 25.944C15.2598 25.3467 14.6998 25.048 13.9158 25.048C13.3932 25.048 12.9452 25.1507 12.5718 25.356C12.2172 25.5613 11.9372 25.86 11.7318 26.252C11.5265 26.644 11.4238 27.1387 11.4238 27.736C11.4238 28.352 11.5358 28.8653 11.7598 29.276C11.9838 29.668 12.3292 30.0227 12.7958 30.34C13.2812 30.6387 13.8785 30.9653 14.5878 31.32C15.3532 31.6933 15.9972 32.076 16.5198 32.468C17.0612 32.8413 17.4718 33.308 17.7518 33.868C18.0505 34.4093 18.1998 35.1 18.1998 35.94C18.1998 37.3027 17.7985 38.3667 16.9958 39.132C16.1932 39.8973 15.0265 40.28 13.4958 40.28ZM25.892 40.28C24.044 40.28 22.6253 39.6173 21.636 38.292C20.6653 36.948 20.18 35.0627 20.18 32.636C20.18 30.004 20.6466 28.0347 21.58 26.728C22.532 25.4027 23.8666 24.74 25.584 24.74C27.208 24.74 28.4586 25.3373 29.336 26.532C30.232 27.708 30.68 29.388 30.68 31.572V32.132H22.672C22.6906 34.0173 22.8306 35.5387 23.092 36.696C23.3533 37.8347 23.7453 38.6653 24.268 39.188C24.7906 39.7107 25.4626 39.972 26.284 39.972C26.8626 39.972 27.376 39.8507 27.824 39.608C28.272 39.3653 28.636 38.992 28.916 38.488C29.2146 37.9653 29.42 37.3213 29.532 36.556C29.7373 36.612 29.896 36.724 30.008 36.892C30.1386 37.0413 30.204 37.228 30.204 37.452C30.204 37.8253 30.0453 38.236 29.728 38.684C29.4106 39.132 28.9346 39.5147 28.3 39.832C27.6653 40.1307 26.8626 40.28 25.892 40.28ZM28.16 31.852C28.16 30.228 28.0666 28.912 27.88 27.904C27.712 26.896 27.4413 26.168 27.068 25.72C26.7133 25.2533 26.2186 25.02 25.584 25.02C24.9493 25.02 24.4173 25.2533 23.988 25.72C23.5773 26.168 23.26 26.896 23.036 27.904C22.8306 28.8933 22.7093 30.2093 22.672 31.852H28.16ZM32.2175 40V39.72H32.3295C32.8709 39.72 33.2815 39.664 33.5615 39.552C33.8415 39.44 34.0282 39.2347 34.1215 38.936C34.2335 38.6373 34.2895 38.2173 34.2895 37.676V27.288C34.2895 26.728 34.2335 26.308 34.1215 26.028C34.0282 25.748 33.8415 25.552 33.5615 25.44C33.3002 25.328 32.8989 25.272 32.3575 25.272H32.3015V24.992H36.7815L36.7535 28.016H36.8375C36.9869 27.4 37.1922 26.8493 37.4535 26.364C37.7149 25.86 38.0695 25.4587 38.5175 25.16C38.9842 24.8613 39.5535 24.712 40.2255 24.712C41.0282 24.712 41.6349 24.8987 42.0455 25.272C42.4562 25.6453 42.6615 26.1493 42.6615 26.784C42.6615 27.3627 42.4842 27.82 42.1295 28.156C41.7935 28.4733 41.2615 28.632 40.5335 28.632C40.5335 27.848 40.4775 27.232 40.3655 26.784C40.2722 26.336 40.1229 26.0187 39.9175 25.832C39.7309 25.6453 39.4695 25.552 39.1335 25.552C38.7229 25.552 38.3682 25.7013 38.0695 26C37.7709 26.2987 37.5282 26.7187 37.3415 27.26C37.1549 27.8013 37.0149 28.436 36.9215 29.164C36.8469 29.8733 36.8095 30.6667 36.8095 31.544V37.648C36.8095 38.208 36.8562 38.6373 36.9495 38.936C37.0615 39.2347 37.2669 39.44 37.5655 39.552C37.8829 39.664 38.3029 39.72 38.8255 39.72H39.1615V40H32.2175ZM48.3786 46.692C46.6986 46.692 45.4106 46.356 44.5146 45.684C43.6372 45.0307 43.1986 44.116 43.1986 42.94C43.1986 42.3053 43.3292 41.7453 43.5906 41.26C43.8706 40.7933 44.2906 40.4107 44.8506 40.112C45.4106 39.8133 46.0919 39.608 46.8946 39.496C46.1666 39.328 45.6252 39.0107 45.2706 38.544C44.9346 38.0587 44.7666 37.5453 44.7666 37.004C44.7666 36.4813 44.9252 35.9773 45.2426 35.492C45.5786 35.0067 46.1012 34.5867 46.8106 34.232C46.0266 33.9147 45.3919 33.392 44.9066 32.664C44.4399 31.9173 44.2066 31.0027 44.2066 29.92C44.2066 28.184 44.5892 26.8867 45.3546 26.028C46.1386 25.1693 47.3052 24.74 48.8546 24.74C49.4332 24.74 49.9746 24.824 50.4786 24.992C50.9826 25.16 51.4212 25.4213 51.7946 25.776C51.9252 25.5147 52.0932 25.2627 52.2986 25.02C52.5039 24.7587 52.7466 24.544 53.0266 24.376C53.3066 24.1893 53.6332 24.096 54.0066 24.096C54.4732 24.096 54.8186 24.2453 55.0426 24.544C55.2852 24.824 55.4066 25.1693 55.4066 25.58C55.4066 25.9533 55.3039 26.2613 55.0986 26.504C54.8932 26.7467 54.5666 26.868 54.1186 26.868C54.1186 26.2707 54.0439 25.8413 53.8946 25.58C53.7452 25.3 53.5026 25.16 53.1666 25.16C52.9426 25.16 52.7372 25.2253 52.5506 25.356C52.3826 25.468 52.1959 25.6733 51.9906 25.972C52.4199 26.3827 52.7466 26.9053 52.9706 27.54C53.2132 28.1747 53.3346 28.9213 53.3346 29.78C53.3346 31.236 52.9612 32.4027 52.2146 33.28C51.4866 34.1573 50.3572 34.596 48.8266 34.596C48.5466 34.596 48.2572 34.5773 47.9586 34.54C47.6599 34.5027 47.3706 34.4373 47.0906 34.344C46.7546 34.6053 46.5212 34.8667 46.3906 35.128C46.2599 35.3893 46.1946 35.66 46.1946 35.94C46.1946 36.4253 46.3532 36.808 46.6706 37.088C47.0066 37.3493 47.4639 37.48 48.0426 37.48H50.4786C51.4866 37.48 52.2986 37.648 52.9146 37.984C53.5306 38.32 53.9786 38.796 54.2586 39.412C54.5386 40.0093 54.6786 40.7187 54.6786 41.54C54.6786 43.1267 54.1559 44.3773 53.1106 45.292C52.0839 46.2253 50.5066 46.692 48.3786 46.692ZM48.6586 46.412C49.6292 46.412 50.4319 46.2533 51.0666 45.936C51.7012 45.6373 52.1586 45.1893 52.4386 44.592C52.7372 44.0133 52.8866 43.304 52.8866 42.464C52.8866 41.5493 52.6719 40.8493 52.2426 40.364C51.8132 39.8787 51.0666 39.636 50.0026 39.636H47.8746C47.3706 39.636 46.9039 39.7573 46.4746 40C46.0452 40.224 45.6999 40.5787 45.4386 41.064C45.1959 41.5493 45.0746 42.1747 45.0746 42.94C45.0746 43.724 45.2146 44.368 45.4946 44.872C45.7932 45.3947 46.2039 45.7773 46.7266 46.02C47.2679 46.2813 47.9119 46.412 48.6586 46.412ZM48.7706 34.316C49.3119 34.316 49.7412 34.176 50.0586 33.896C50.3946 33.5973 50.6372 33.1213 50.7866 32.468C50.9546 31.796 51.0386 30.9 51.0386 29.78C51.0386 28.5667 50.9546 27.6147 50.7866 26.924C50.6186 26.2333 50.3666 25.748 50.0306 25.468C49.7132 25.1693 49.2839 25.02 48.7426 25.02C48.2386 25.02 47.8186 25.1693 47.4826 25.468C47.1466 25.7667 46.8946 26.2707 46.7266 26.98C46.5772 27.6893 46.5026 28.632 46.5026 29.808C46.5026 30.9093 46.5772 31.7867 46.7266 32.44C46.8946 33.0933 47.1372 33.5693 47.4546 33.868C47.7906 34.1667 48.2292 34.316 48.7706 34.316Z"/></svg><div class="logo__name"><b>Сергій Удовіков</b><span>massage_serg_kh</span></div></div>
+      <p class="footer__muted">Інтегративний тілесний масаж у Харкові</p>
+    </div>
+    <div class="footer__navs">
+      <nav class="fcol" aria-label="Навігація"><span class="fcol__label">навігація</span>
+        <div class="fcol__links"><a href="#services">Послуги</a><a href="#about">Про мене</a><a href="#reviews">Відгуки</a><a href="#contacts">Контакти</a></div></nav>
+      <div class="fcol"><span class="fcol__label">звʼязок</span>
+        <div class="fcol__links"><a href="https://www.instagram.com/massage_serg_kh/" target="_blank" rel="noopener">Instagram</a><a href="https://t.me/ser_g00d" target="_blank" rel="noopener">Telegram</a><a href="tel:+380965995826">Телефон</a></div></div>
+    </div>
+    <div class="footer__ask">
+      <p class="serif">Залишились питання?<br>Напишіть у Telegram</p>
+      <a class="btn btn--outline" href="https://t.me/ser_g00d" target="_blank" rel="noopener">задати питання<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+    </div>
+  </div>
+  <div class="footer__line"></div>
+  <div class="footer__bottom"><span>© 2026</span><a href="#privacy" data-privacy-open>Політика конфіденційності</a></div>
+</footer>
+
+
+<!-- menu -->
+<div class="menu" id="menu" role="dialog" aria-modal="true" aria-label="Меню" aria-hidden="true">
+  <div class="menu__head">
+    <button class="chip menu__close" type="button" data-menu-close>
+      <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1 1 13" stroke="#0E0C0B" stroke-width="1.5"/></svg>
+      <span>Закрити</span>
+    </button>
+    <a class="btn btn--light btn--head" href="https://t.me/ser_g00d" target="_blank" rel="noopener">Записатися<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+  </div>
+  <div class="menu__main">
+    <nav aria-label="Розділи сайту">
+      <ul class="menu__list">
+        <li><a class="menu__item" href="#services" data-menu-link><span class="menu__num">01</span><span class="menu__title serif">Послуги</span></a></li>
+        <li><a class="menu__item" href="#about" data-menu-link><span class="menu__num">02</span><span class="menu__title serif">Про мене</span></a></li>
+        <li><a class="menu__item" href="#reviews" data-menu-link><span class="menu__num">03</span><span class="menu__title serif">Відгуки</span></a></li>
+        <li><a class="menu__item" href="#contacts" data-menu-link><span class="menu__num">04</span><span class="menu__title serif">Контакти</span></a></li>
+      </ul>
+    </nav>
+    <div class="menu__bottom">
+      <div class="menu__contacts">
+        <a class="contact" href="https://www.instagram.com/massage_serg_kh/" target="_blank" rel="noopener"><span class="contact__label">instagram</span><span class="contact__value">@massage_serg_kh</span></a>
+        <a class="contact" href="https://t.me/ser_g00d" target="_blank" rel="noopener"><span class="contact__label">telegram</span><span class="contact__value">@ser_g00d</span></a>
+        <a class="contact" href="tel:+380965995826"><span class="contact__label">телефон</span><span class="contact__value">+380 96 599 58 26</span></a>
+      </div>
+      <a class="btn btn--accent menu__cta" href="https://t.me/ser_g00d" target="_blank" rel="noopener">Записатися<span class="btn__arrow" aria-hidden="true"><span class="arr"><i>→</i></span></span></a>
+    </div>
+  </div>
+  <div class="menu__foot">
+    <div class="menu__brand">
+      <svg viewBox="0 0 64 64" fill="none" aria-hidden="true"><path d="M.5 14V.5H14M50 .5h13.5V14M63.5 50v13.5H50M14 63.5H.5V50" stroke="#F5F2EE" stroke-width="1.5"/><path fill="#F5F2EE" d="M13.4958 40.28C12.5438 40.28 11.7598 40.14 11.1438 39.86C10.5278 39.58 10.0705 39.216 9.77183 38.768C9.47316 38.3013 9.32383 37.8067 9.32383 37.284C9.32383 36.8547 9.39849 36.5187 9.54783 36.276C9.71583 36.0147 9.91183 35.828 10.1358 35.716C10.3785 35.604 10.6305 35.548 10.8918 35.548C10.8918 36.556 10.9758 37.3867 11.1438 38.04C11.3118 38.6933 11.5918 39.188 11.9838 39.524C12.3945 39.8413 12.9265 40 13.5798 40C14.4572 40 15.1478 39.748 15.6518 39.244C16.1558 38.74 16.4078 37.9747 16.4078 36.948C16.4078 36.3133 16.3052 35.8093 16.0998 35.436C15.8945 35.044 15.5678 34.6987 15.1198 34.4C14.6718 34.1013 14.0932 33.756 13.3838 33.364C12.5625 32.9347 11.8718 32.5147 11.3118 32.104C10.7518 31.6933 10.3318 31.2267 10.0518 30.704C9.77183 30.1813 9.63183 29.528 9.63183 28.744C9.63183 27.4373 10.0238 26.448 10.8078 25.776C11.5918 25.104 12.6652 24.768 14.0278 24.768C14.8492 24.768 15.5398 24.8893 16.0998 25.132C16.6598 25.356 17.0798 25.664 17.3598 26.056C17.6398 26.448 17.7798 26.8867 17.7798 27.372C17.7798 27.8573 17.6398 28.24 17.3598 28.52C17.0798 28.8 16.6692 28.94 16.1278 28.94C16.1278 27.54 15.9505 26.5413 15.5958 25.944C15.2598 25.3467 14.6998 25.048 13.9158 25.048C13.3932 25.048 12.9452 25.1507 12.5718 25.356C12.2172 25.5613 11.9372 25.86 11.7318 26.252C11.5265 26.644 11.4238 27.1387 11.4238 27.736C11.4238 28.352 11.5358 28.8653 11.7598 29.276C11.9838 29.668 12.3292 30.0227 12.7958 30.34C13.2812 30.6387 13.8785 30.9653 14.5878 31.32C15.3532 31.6933 15.9972 32.076 16.5198 32.468C17.0612 32.8413 17.4718 33.308 17.7518 33.868C18.0505 34.4093 18.1998 35.1 18.1998 35.94C18.1998 37.3027 17.7985 38.3667 16.9958 39.132C16.1932 39.8973 15.0265 40.28 13.4958 40.28ZM25.892 40.28C24.044 40.28 22.6253 39.6173 21.636 38.292C20.6653 36.948 20.18 35.0627 20.18 32.636C20.18 30.004 20.6466 28.0347 21.58 26.728C22.532 25.4027 23.8666 24.74 25.584 24.74C27.208 24.74 28.4586 25.3373 29.336 26.532C30.232 27.708 30.68 29.388 30.68 31.572V32.132H22.672C22.6906 34.0173 22.8306 35.5387 23.092 36.696C23.3533 37.8347 23.7453 38.6653 24.268 39.188C24.7906 39.7107 25.4626 39.972 26.284 39.972C26.8626 39.972 27.376 39.8507 27.824 39.608C28.272 39.3653 28.636 38.992 28.916 38.488C29.2146 37.9653 29.42 37.3213 29.532 36.556C29.7373 36.612 29.896 36.724 30.008 36.892C30.1386 37.0413 30.204 37.228 30.204 37.452C30.204 37.8253 30.0453 38.236 29.728 38.684C29.4106 39.132 28.9346 39.5147 28.3 39.832C27.6653 40.1307 26.8626 40.28 25.892 40.28ZM28.16 31.852C28.16 30.228 28.0666 28.912 27.88 27.904C27.712 26.896 27.4413 26.168 27.068 25.72C26.7133 25.2533 26.2186 25.02 25.584 25.02C24.9493 25.02 24.4173 25.2533 23.988 25.72C23.5773 26.168 23.26 26.896 23.036 27.904C22.8306 28.8933 22.7093 30.2093 22.672 31.852H28.16ZM32.2175 40V39.72H32.3295C32.8709 39.72 33.2815 39.664 33.5615 39.552C33.8415 39.44 34.0282 39.2347 34.1215 38.936C34.2335 38.6373 34.2895 38.2173 34.2895 37.676V27.288C34.2895 26.728 34.2335 26.308 34.1215 26.028C34.0282 25.748 33.8415 25.552 33.5615 25.44C33.3002 25.328 32.8989 25.272 32.3575 25.272H32.3015V24.992H36.7815L36.7535 28.016H36.8375C36.9869 27.4 37.1922 26.8493 37.4535 26.364C37.7149 25.86 38.0695 25.4587 38.5175 25.16C38.9842 24.8613 39.5535 24.712 40.2255 24.712C41.0282 24.712 41.6349 24.8987 42.0455 25.272C42.4562 25.6453 42.6615 26.1493 42.6615 26.784C42.6615 27.3627 42.4842 27.82 42.1295 28.156C41.7935 28.4733 41.2615 28.632 40.5335 28.632C40.5335 27.848 40.4775 27.232 40.3655 26.784C40.2722 26.336 40.1229 26.0187 39.9175 25.832C39.7309 25.6453 39.4695 25.552 39.1335 25.552C38.7229 25.552 38.3682 25.7013 38.0695 26C37.7709 26.2987 37.5282 26.7187 37.3415 27.26C37.1549 27.8013 37.0149 28.436 36.9215 29.164C36.8469 29.8733 36.8095 30.6667 36.8095 31.544V37.648C36.8095 38.208 36.8562 38.6373 36.9495 38.936C37.0615 39.2347 37.2669 39.44 37.5655 39.552C37.8829 39.664 38.3029 39.72 38.8255 39.72H39.1615V40H32.2175ZM48.3786 46.692C46.6986 46.692 45.4106 46.356 44.5146 45.684C43.6372 45.0307 43.1986 44.116 43.1986 42.94C43.1986 42.3053 43.3292 41.7453 43.5906 41.26C43.8706 40.7933 44.2906 40.4107 44.8506 40.112C45.4106 39.8133 46.0919 39.608 46.8946 39.496C46.1666 39.328 45.6252 39.0107 45.2706 38.544C44.9346 38.0587 44.7666 37.5453 44.7666 37.004C44.7666 36.4813 44.9252 35.9773 45.2426 35.492C45.5786 35.0067 46.1012 34.5867 46.8106 34.232C46.0266 33.9147 45.3919 33.392 44.9066 32.664C44.4399 31.9173 44.2066 31.0027 44.2066 29.92C44.2066 28.184 44.5892 26.8867 45.3546 26.028C46.1386 25.1693 47.3052 24.74 48.8546 24.74C49.4332 24.74 49.9746 24.824 50.4786 24.992C50.9826 25.16 51.4212 25.4213 51.7946 25.776C51.9252 25.5147 52.0932 25.2627 52.2986 25.02C52.5039 24.7587 52.7466 24.544 53.0266 24.376C53.3066 24.1893 53.6332 24.096 54.0066 24.096C54.4732 24.096 54.8186 24.2453 55.0426 24.544C55.2852 24.824 55.4066 25.1693 55.4066 25.58C55.4066 25.9533 55.3039 26.2613 55.0986 26.504C54.8932 26.7467 54.5666 26.868 54.1186 26.868C54.1186 26.2707 54.0439 25.8413 53.8946 25.58C53.7452 25.3 53.5026 25.16 53.1666 25.16C52.9426 25.16 52.7372 25.2253 52.5506 25.356C52.3826 25.468 52.1959 25.6733 51.9906 25.972C52.4199 26.3827 52.7466 26.9053 52.9706 27.54C53.2132 28.1747 53.3346 28.9213 53.3346 29.78C53.3346 31.236 52.9612 32.4027 52.2146 33.28C51.4866 34.1573 50.3572 34.596 48.8266 34.596C48.5466 34.596 48.2572 34.5773 47.9586 34.54C47.6599 34.5027 47.3706 34.4373 47.0906 34.344C46.7546 34.6053 46.5212 34.8667 46.3906 35.128C46.2599 35.3893 46.1946 35.66 46.1946 35.94C46.1946 36.4253 46.3532 36.808 46.6706 37.088C47.0066 37.3493 47.4639 37.48 48.0426 37.48H50.4786C51.4866 37.48 52.2986 37.648 52.9146 37.984C53.5306 38.32 53.9786 38.796 54.2586 39.412C54.5386 40.0093 54.6786 40.7187 54.6786 41.54C54.6786 43.1267 54.1559 44.3773 53.1106 45.292C52.0839 46.2253 50.5066 46.692 48.3786 46.692ZM48.6586 46.412C49.6292 46.412 50.4319 46.2533 51.0666 45.936C51.7012 45.6373 52.1586 45.1893 52.4386 44.592C52.7372 44.0133 52.8866 43.304 52.8866 42.464C52.8866 41.5493 52.6719 40.8493 52.2426 40.364C51.8132 39.8787 51.0666 39.636 50.0026 39.636H47.8746C47.3706 39.636 46.9039 39.7573 46.4746 40C46.0452 40.224 45.6999 40.5787 45.4386 41.064C45.1959 41.5493 45.0746 42.1747 45.0746 42.94C45.0746 43.724 45.2146 44.368 45.4946 44.872C45.7932 45.3947 46.2039 45.7773 46.7266 46.02C47.2679 46.2813 47.9119 46.412 48.6586 46.412ZM48.7706 34.316C49.3119 34.316 49.7412 34.176 50.0586 33.896C50.3946 33.5973 50.6372 33.1213 50.7866 32.468C50.9546 31.796 51.0386 30.9 51.0386 29.78C51.0386 28.5667 50.9546 27.6147 50.7866 26.924C50.6186 26.2333 50.3666 25.748 50.0306 25.468C49.7132 25.1693 49.2839 25.02 48.7426 25.02C48.2386 25.02 47.8186 25.1693 47.4826 25.468C47.1466 25.7667 46.8946 26.2707 46.7266 26.98C46.5772 27.6893 46.5026 28.632 46.5026 29.808C46.5026 30.9093 46.5772 31.7867 46.7266 32.44C46.8946 33.0933 47.1372 33.5693 47.4546 33.868C47.7906 34.1667 48.2292 34.316 48.7706 34.316Z"/></svg>
+      <span class="menu__muted">Інтегративний тілесний масаж у Харкові</span>
+    </div>
+    <span class="menu__muted">Харків · Пн–Нд, 10:00–20:00</span>
+  </div>
+</div>
+
+<div class="modal" id="privacy" role="dialog" aria-modal="true" aria-labelledby="privacy-title" aria-hidden="true">
+  <div class="modal__head">
+    <button class="chip menu__close" type="button" data-privacy-close>
+      <svg viewBox="0 0 14 14" fill="none" aria-hidden="true"><path d="M1 1l12 12M13 1 1 13" stroke="#0E0C0B" stroke-width="1.5"/></svg>
+      <span>Закрити</span>
+    </button>
+  </div>
+  <div class="modal__body">
+    <h2 class="serif" id="privacy-title">Політика конфіденційності</h2>
+    <p class="modal__date">Оновлено: листопад 2026 року</p>
+    <p>Цей сайт належить масажисту Сергію Удовікову (Харків, пр. Науки 56) і розповідає про його послуги.</p>
+    <h3>Які дані збирає сайт</h3>
+    <p>Сайт не має форм і не просить залишати ім'я, телефон чи інші дані. Записатися можна напряму в Telegram, Instagram або за телефоном.</p>
+    <h3>Коли ви пишете або телефонуєте</h3>
+    <p>Ваше ім'я, номер телефону чи нікнейм, а також те, що ви самі розповідаєте про своє самопочуття, Сергій використовує лише для того, щоб записати вас на сеанс, підібрати масаж і зв'язатися щодо запису. Ці дані не передаються третім особам і не використовуються для реклами.</p>
+    <h3>Технічні дані</h3>
+    <p>Хостинг сайту може автоматично фіксувати технічну інформацію (IP-адресу, тип браузера, час відвідування), щоб сайт працював стабільно й безпечно. Сайт не використовує рекламних чи аналітичних файлів cookie.</p>
+    <h3>Інші сервіси</h3>
+    <p>Telegram, Instagram і Google Maps, на які ведуть посилання з сайту, мають власні правила обробки даних.</p>
+    <h3>Ваші права</h3>
+    <p>Відповідно до Закону України «Про захист персональних даних» ви можете дізнатися, які дані про вас зберігаються, попросити виправити або видалити їх. Напишіть у Telegram @ser_g00d або зателефонуйте: +380 96 599 58 26.</p>
+    <h3>Зміни</h3>
+    <p>Якщо політика зміниться, оновлена версія з'явиться на цьому сайті.</p>
+  </div>
+</div>
+
+<script>
+(function(){
+  var menu=document.getElementById('menu'), body=document.body, opener=null;
+  function open(e){opener=e&&e.currentTarget;menu.classList.add('is-open');menu.setAttribute('aria-hidden','false');body.classList.add('menu-open');
+    var c=menu.querySelector('[data-menu-close]'); c&&c.focus();}
+  function close(){menu.classList.remove('is-open');menu.setAttribute('aria-hidden','true');body.classList.remove('menu-open');opener&&opener.focus();}
+  document.querySelectorAll('[data-menu-open]').forEach(function(b){b.addEventListener('click',open)});
+  document.querySelectorAll('[data-menu-close],[data-menu-link]').forEach(function(b){b.addEventListener('click',close)});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&menu.classList.contains('is-open'))close()});
+
+
+
+
+  var reduceM=window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // ---- heading letter fill on scroll
+  function splitLetters(el){
+    var letters=[];
+    (function walk(node){
+      [].slice.call(node.childNodes).forEach(function(n){
+        if(n.nodeType===3){
+          var frag=document.createDocumentFragment();
+          n.textContent.split(/(\s+)/).forEach(function(w){
+            if(!w) return;
+            if(/^\s+$/.test(w)){frag.appendChild(document.createTextNode(w));return;}
+            var ww=document.createElement('span');ww.style.whiteSpace='nowrap';
+            Array.from(w).forEach(function(ch){var l=document.createElement('span');l.className='fill-l';l.textContent=ch;ww.appendChild(l);letters.push(l);});
+            frag.appendChild(ww);});
+          n.parentNode.replaceChild(frag,n);
+        } else if(n.nodeType===1 && n.tagName!=='BR'){ walk(n); }
+      });
+    })(el);
+    return letters;
+  }
+  function paint(letters,p){var n=letters.length,k=14,t=p*(n+k);
+    for(var i=0;i<n;i++){var v=Math.min(1,Math.max(0,(t-i)/k));letters[i].style.setProperty('--o',(.18+.82*v).toFixed(3));}}
+  if(!reduceM){
+    var fills=[].map.call(document.querySelectorAll('main h2'),function(h){return {el:h,l:splitLetters(h),cur:0,tgt:0};});
+    fills.forEach(function(f){paint(f.l,0)});
+    var looping=false;
+    function targets(){var vh=window.innerHeight;
+      fills.forEach(function(f){var r=f.el.getBoundingClientRect();
+        var p=(vh*0.72-r.top)/(vh*0.5); f.tgt=Math.max(0,Math.min(1,p));});}
+    function loop(){var busy=false;
+      fills.forEach(function(f){var d=f.tgt-f.cur; if(Math.abs(d)<.001){if(f.cur!==f.tgt){f.cur=f.tgt;paint(f.l,f.cur);}return;}
+        busy=true; f.cur+=d*0.045; paint(f.l,f.cur);});
+      if(busy) requestAnimationFrame(loop); else looping=false;}
+    function kick(){targets(); if(!looping){looping=true;requestAnimationFrame(loop);}}
+    window.addEventListener('scroll',kick,{passive:true}); window.addEventListener('resize',kick); kick();
+    // hero title fills itself on load
+    var h1=document.querySelector('.hero h1'); var hl=splitLetters(h1); paint(hl,0);
+    var t0=null; function run(ts){if(!t0)t0=ts;var p=Math.min(1,(ts-t0)/2400);p=1-Math.pow(1-p,3);paint(hl,p);if(p<1)requestAnimationFrame(run);}
+    setTimeout(function(){requestAnimationFrame(run)},300);
+  }
+  // ---- reveal on scroll
+  var revealSel=['main .eyebrow','main .video','.after__levels','.after__next','.about__text','.about .btn','.clist','.services__foot','.reviews__foot','.footer__cols > *','.footer__bottom'];
+  document.querySelectorAll(revealSel.join(',')).forEach(function(el){el.classList.add('rv');});
+  document.querySelectorAll('.carousel__track').forEach(function(tr){[].forEach.call(tr.children,function(c,i){c.classList.add('rv');c.style.setProperty('--d',(i*0.08)+'s');});});
+  document.querySelectorAll('.after__img,.about__photo,.contacts__photo').forEach(function(el){
+    if(el.tagName==='IMG'){var w=document.createElement('div');w.className='rv-img';w.style.cssText='display:contents';}
+    el.classList.add(el.tagName==='IMG'?'rv':'rv-img');});
+  if('IntersectionObserver' in window && !reduceM){
+    var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('is-in');io.unobserve(e.target);}})},{rootMargin:'0px 0px -8% 0px'});
+    document.querySelectorAll('.rv,.rv-img').forEach(function(el){io.observe(el)});
+  } else { document.querySelectorAll('.rv,.rv-img').forEach(function(el){el.classList.add('is-in')}); }
+  requestAnimationFrame(function(){document.querySelector('.hero').classList.add('is-in')});
+
+  // privacy modal
+  var pm=document.getElementById('privacy'), pOpener=null;
+  function pOpen(e){e&&e.preventDefault();pOpener=e&&e.currentTarget;pm.classList.add('is-open');pm.setAttribute('aria-hidden','false');body.classList.add('menu-open');pm.querySelector('[data-privacy-close]').focus();}
+  function pClose(){pm.classList.remove('is-open');pm.setAttribute('aria-hidden','true');body.classList.remove('menu-open');pOpener&&pOpener.focus();}
+  document.querySelectorAll('[data-privacy-open]').forEach(function(a){a.addEventListener('click',pOpen)});
+  pm.querySelector('[data-privacy-close]').addEventListener('click',pClose);
+  pm.addEventListener('click',function(e){if(e.target===pm)pClose()});
+  document.addEventListener('keydown',function(e){if(e.key==='Escape'&&pm.classList.contains('is-open'))pClose()});
+
+  // video placeholder note
+  document.querySelectorAll('.video').forEach(function(v){var t;
+    function show(){v.classList.add('is-note');clearTimeout(t);t=setTimeout(function(){v.classList.remove('is-note')},3500);}
+    v.addEventListener('click',show);v.addEventListener('keydown',function(e){if(e.key==='Enter'||e.key===' '){e.preventDefault();show();}});});
+
+
+  // carousels with flowing dot
+  document.querySelectorAll('.carousel').forEach(function(c){
+    var tr=c.querySelector('.carousel__track'), dots=c.querySelector('.dots'); if(!tr||!dots) return;
+    function step(){var a=tr.children[0],b=tr.children[1];return b?b.offsetLeft-a.offsetLeft:tr.clientWidth;}
+    function count(){return Math.max(1,Math.round((tr.scrollWidth-tr.clientWidth)/step())+1);}
+    function build(){var n=count();dots.innerHTML='';for(var i=0;i<n;i++){var b=document.createElement('button');b.type='button';b.setAttribute('aria-label','Слайд '+(i+1));
+      (function(i){b.addEventListener('click',function(){tr.scrollTo({left:i*step(),behavior:'smooth'})})})(i);dots.appendChild(b);}
+      dots.style.display=n>1?'':'none';sync();}
+    function sync(){var i=Math.round(tr.scrollLeft/step());if(tr.scrollLeft+tr.clientWidth>=tr.scrollWidth-4)i=dots.children.length-1;
+      [].forEach.call(dots.children,function(d,k){d.classList.toggle('is-active',k===i)});}
+    var auto=c.classList.contains('carousel--auto');
+    function fit(){if(!auto)return;if(!window.matchMedia('(max-width:767px)').matches){tr.style.height='';return;}
+      var i=Math.min(tr.children.length-1,Math.round(tr.scrollLeft/step()));tr.style.height=tr.children[i].offsetHeight+'px';}
+    var ft;tr.addEventListener('scroll',function(){requestAnimationFrame(sync);clearTimeout(ft);ft=setTimeout(fit,120);},{passive:true});
+    window.addEventListener('resize',fit); setTimeout(fit,50);
+    window.addEventListener('resize',build); build();
+    // mouse drag on desktop
+    var down=false,x0=0,s0=0,moved=false;
+    tr.addEventListener('pointerdown',function(e){if(e.pointerType!=='mouse')return;down=true;moved=false;x0=e.clientX;s0=tr.scrollLeft;});
+    window.addEventListener('pointermove',function(e){if(!down)return;var dx=e.clientX-x0;if(Math.abs(dx)>4){moved=true;tr.classList.add('is-drag');}tr.scrollLeft=s0-dx;});
+    window.addEventListener('pointerup',function(){if(!down)return;down=false;if(moved){tr.classList.remove('is-drag');var i=Math.round(tr.scrollLeft/step());tr.scrollTo({left:i*step(),behavior:'smooth'});}});
+    tr.addEventListener('click',function(e){if(moved){e.preventDefault();e.stopPropagation();moved=false;}},true);
+  });
+
+  // travelling focus marker: desktop and mobile, one point at a time
+  function travel(m,pts,mq){ if(!m) return; var i=0,num=m.querySelector('.focus__num'),txt=m.querySelector('.focus__txt');
+    if(window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+    setInterval(function(){
+      if(!window.matchMedia(mq).matches) return;
+      i=(i+1)%pts.length; var p=pts[i];
+      m.classList.add('is-fading');
+      setTimeout(function(){m.style.setProperty('--x',p.x);m.style.setProperty('--y',p.y);m.classList.toggle('is-left',!!p.left);},350);
+      setTimeout(function(){num.textContent=p.n;txt.textContent=p.t;m.classList.remove('is-fading');},1600);
+    },4200);
+  }
+  travel(document.querySelector('.focus--desk'),[
+    {x:'68.06%',y:'50%',n:'(01)',t:'легкість у тілі'},
+    {x:'51.39%',y:'26%',n:'(02)',t:'тиша всередині'},
+    {x:'80.28%',y:'29.2%',n:'(03)',t:'зняття напруги'}],'(min-width:1024px)');
+  travel(document.querySelector('.focus--mob'),[
+    {x:'7.5%',y:'11.6%',n:'(01)',t:'легкість у тілі'},
+    {x:'35.7%',y:'28.8%',n:'(02)',t:'тиша всередині'},
+    {x:'74.7%',y:'19.7%',n:'(03)',t:'зняття напруги',left:true}],'(max-width:767px)');
+})();
+</script>
+</body>
+</html>
